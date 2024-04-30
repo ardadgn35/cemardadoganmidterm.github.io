@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hepsiburada - Kategoriler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kategori-menu">
+        <ul>
+            <li><a href="#">Kategori</a></li>
+            <li><a href="kategoriler.html">Tüm kategoriler</a></li>
+            <li><a href="kategorianne.html">Anne / Bebek / Oyuncak</a></li>
+            <li><a href="kategoriyapi.html">Yapı Market / Bahçe / Oto</a></li>
+            <li><a href="kategorianne.html">Hobi ve Oyun Konsolları</a></li>
+            <li><a href="kategoriyapi.html">Ev Dekorasyon</a></li>
+            <li><a href="kategoriyapi.html">Spor Outdoor</a></li>
+            <li><a href="kategoriyapi.html">Giyim / Ayakkabı</a></li>
+            <li><a href="kategoriyapi.html">Beyaz Eşya / Mutfak</a></li>
+            <li><a href="kategoriev.html">Ev Elektroniği</a></li>
+            <li><a href="kategoriyapi.html">Telefon</a></li>
+            <li><a href="kategoriofis.html">Kırtasiye / Ofis</a></li>
+            <li><a href="kategoripc.html">Bilgisayar</a></li>
+            <li><a href="kategoriyapi.html">Kitap Film Müzik</a></li>
+            <li><a href="kategoriyapi.html">Kozmetik Kişisel Bakım</a></li>
+        </ul>
+    </div>
+
+    <table id="tableyatay">
+        <tr>
+            <td id="solAlan" rowspan="2">
+                <div>
+                    <img src="images/konumizmir.png" alt="Sol Resim">
+                    <strong>Teslimat filtreleri</strong>
+                </div>
+                <div>
+                    Konumunuzu seçerek hızlı teslimattan faydalanın
+                </div>
+            </td>
+        <tr>
+            <td id="sagAlan">
+                <div>
+                    <div class="kare" onclick="toggleCheck(this)"></div>
+                    <span class="yazi">Yarın kapında</span>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <table id="urunlertable">
+        <tr>
+            <td>
+              <h1>Bu kategoride ürün bulunmamaktadır.</h1>
+            </td>
+            
+        </tr>
+    </table>
+    
+
+    <script>
+        function toggleCheck(element) {
+            element.classList.toggle("isaretli");
+        }
+        function goToUrun1() {
+        window.location.href = "urun1.html"; 
+        }
+        function goToUrun2() {
+        window.location.href = "urun2.html"; 
+        }
+        function goToUrun3() {
+        window.location.href = "urun3.html"; 
+        }
+        function goToUrun4() {
+        window.location.href = "urun4.html"; 
+        }
+        function goToUrun5() {
+        window.location.href = "urun5.html"; 
+        }
+        function goToUrun6() {
+        window.location.href = "urun6.html"; 
+        }
+        function goToUrun7() {
+        window.location.href = "urun7.html"; 
+        }
+        function goToUrun8() {
+        window.location.href = "urun8.html"; 
+        }
+        function goToUrun9() {
+        window.location.href = "urun9.html"; 
+        }
+        function goToUrun10() {
+        window.location.href = "urun10.html"; 
+        }
+
+    </script>
+
+</body>
+</html>

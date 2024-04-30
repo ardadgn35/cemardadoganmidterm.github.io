@@ -1,0 +1,291 @@
+nav {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 0;
+    margin-left: 500px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #252424;
+    font-size: 10px;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav li a:hover {
+    background-color: #ffffff;
+}
+
+/* Responsive navbar için */
+
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+#nav2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #fff;
+    margin-left: 10px;
+
+}
+
+.logo img {
+    width: auto; /* Genişlik otomatik olarak ayarlanır */
+    height: 75px; /* Resimlerin yüksekliği */
+}
+
+.search input[type="text"] {
+    width: 350px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.search button {
+    padding: 15px 15px;
+    height: auto;
+    border-radius: 5px;
+    border: none;
+    background-color: #919191;
+    color: #fff;
+    cursor: pointer;
+}
+
+#image-navbar {
+    width: 100%; /* Image takes full width of the page */
+    height: auto;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  
+  .full-width-image {
+    width: 100%; /* Image itself stretches to fill the navbar */
+  }
+
+  #navbar3 {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 10px 0;
+    margin-left: 0px;
+}
+
+#navbar3 ul {
+    list-style: none;
+    font-size: 12px;
+    margin-left: 300px;
+    margin-right: 200px;
+
+}
+
+#navbar3 li {
+    display: inline-block;
+    font-size: 12px;
+}
+
+
+#navbar3 a {
+    text-decoration: none;
+    color: #3f3e3e;
+    font-size: 8px;
+    padding: 5px 10px;
+}
+
+#navbar3 a:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+
+  
+  .slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+table {
+    border-collapse: collapse;
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Tablonun arka planın üstünde olmasını sağlar */
+}
+
+td {
+    border: 1px solid #000;
+    padding: 10px;
+    
+}
+
+td img {
+    max-width: 820px; /* Resmin maksimum genişliği */
+    max-height: 362px; /* Resmin maksimum yüksekliği */
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 2000px; /* Slayt gösteriminin genişliğini istediğiniz gibi ayarlayabilirsiniz */
+    margin: auto;
+    overflow: hidden; /* Resimlerin taşmasını engelle */
+}
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.slideshow img.active {
+    display: block;
+}
+
+.button-left, .button-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    z-index: 1000; /* Butonları en üste getir */
+}
+
+.button-left {
+    margin-top: 270px;
+    left: 0;
+    margin-left: 350px;
+}
+
+.button-right {
+    margin-top: 270px;
+    right: 0;
+    margin-right: 350px;
+}
+
+.kategori-menu {
+    float: left; /* Sol tarafa yerleştir */
+    width: 150px; /* Sabit genişlik */
+    background-color: #f4f4f4; /* Arka plan rengi */
+    padding: 10px; /* İç boşluklar */
+    border-right: 1px solid #ccc; /* Sağ kenar çizgisi */
+}
+
+.kategori-menu ul {
+    list-style: none; /* Liste öğelerinin işaretlerini kaldır */
+    padding: 0;
+    margin: 0;
+}
+
+.kategori-menu li {
+    margin-bottom: 8px; /* Her kategori arasında boşluk bırak */
+}
+
+.kategori-menu a {
+    text-decoration: none; /* Link altı çizgisini kaldır */
+    color: #333; /* Metin rengi */
+    font-size: 12px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın font */
+}
+
+.kategori-menu a:hover {
+    color: #000; /* Fare üzerine geldiğinde metin rengini değiştir */
+}
+
+#tableyatay {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: -350px; /* Tabloyu yukarıya yaklaştırmak için eklenmiş margin */}
+
+#tableyatay td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#solAlan {
+    width: 70%;
+}
+
+#sagAlan {
+    width: 30%;
+}
+
+#solAlan img, #sagAlan img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+    float: right; /* Resmi sağa yasla */
+    margin-left: 10px; /* Resmin solunda bir boşluk bırak */
+}
+
+
+
+#sagAlan .kare {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 13px;
+    margin-right: 10px; /* Resim ile click arasında boşluk */
+}
+
+#sagAlan .yazi {
+    font-size: 14px; /* Yazı boyutunu küçült */
+    vertical-align: middle; /* Metni dikey olarak hizala */
+}
+
+#sagAlan .kare.isaretli {
+    background-color: #ccc; /* İşaretli durumda arka plan rengini değiştir */
+}
+
+.urun img {
+    width: 200px; /* Resim genişliği */
+    height: 200px;
+    height: auto; /* Resim yüksekliği otomatik ayarlanır */
+    display: block; /* İmgenin blok olarak görünmesini sağlar */
+    margin: 0 auto 10px; /* Üst ve alt boşluk vererek ve yatayda ortalar */
+}
+
+
+.urun_bilgi {
+    text-align: center; /* Ürün bilgisini yatay olarak ortala */
+}
+
+#urunlertable {
+    margin-top: 40px; /* Urunler table ile altındaki yatay tablo arasındaki boşluğu artırır */
+}
+
+.isaretli {
+    background-color: #000; /* İçi dolu olarak belirlediğimiz renk */
+}
+
+
+/* Eğer butonların özel bir stil veya boyutu varsa, burada belirtebilirsiniz */
+

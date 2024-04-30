@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ürün Detayı</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+
+    th {
+      text-align: left;
+    }
+
+    img {
+      max-width: 100%; 
+    }
+
+    @media screen and (max-width: 768px) {
+      img {
+        width: 50%; 
+      }
+
+      #tabledetay1 {
+        display: flex;
+        flex-direction: column; 
+      }
+
+      #tabledetay1 td:first-child {
+        order: 2; 
+      }
+    }
+
+    #tabledetay1 td:last-child {
+      background-color: rgb(245,245,245);
+    }
+  </style>
+</head>
+<body>
+  <div style="margin: 60px;"> 
+  <table id="tabledetay1">
+    <tr>
+        <td rowspan="6" style="width: 50%; text-align: center;">
+            <img src="images/urun4.jfif" alt="Ürün Resmi">
+          </td>
+          
+      <td>
+        <strong style="font-size: larger; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Orion 3.7V 14500 Li-Ion Siyah Soketli Oyuncak Araba Pili 14MM x 50MM Ölçülerinde</strong> <span id="productName" style="font-size: larger; font-weight: bold;"></span><br>
+        <p style="font: size 6px; color: blue; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Orion</p>
+        <p style="font: size 6px;;"></p>
+        <p style="font: size 6px;;"></p>
+        <strong style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">279,00 TL</strong> ₺<span id="productPrice" style="font-size: larger; font-weight: bold;"></span><br>
+        <p style="font: size 6px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">49 TL x 6 aya varan Taksitle</p>
+        <div style="display: flex; align-items: center;">
+            <img src="images/premium.webp" alt="Küçük Resim" style="margin-right: 10px; width: auto; height: 10px;"> <!-- Resim eklendi -->
+            <p style="font: size 6px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Premium ile bu üründen 8,37 TL Hepsipara kazan.</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <img src="images/urun3satici.png" alt="Küçük Resim" style="margin-right: 10px; width: 300px; height: auto;"> <!-- Resim eklendi -->
+            <p style="font: size 6px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"></p>
+        </div>
+        <p style="font: size 6px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: green;">200 TL üzeri kargo bedava</p>
+        <div style="display: flex; align-items: center;">
+            <button onclick="decreaseQuantity()" style="width: 50px; height: 50px; margin-right: 5px;">-</button>
+            <input type="number" id="quantity" value="1" min="1" style="width: 50px; text-align: center; height: 45px;">
+            <button onclick="increaseQuantity()" style="width: 50px; height: 50px; margin-left: 5px;">+</button>            
+            <div style="display: flex; align-items: center;">
+                <img src="images/sepeteekle.png" alt="Sepet İkonu" style="width: auto; height: auto; margin-right: 10px; cursor: pointer; margin-left: 10px; filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" onclick="addToCart()">
+                <p style="font: size 6px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"></p>
+            </div>      
+        </div>
+        
+    </td>
+    </tr>
+  </table>
+</div>
+
+
+  <script>
+    function increaseQuantity() {
+      var quantityElement = document.getElementById("quantity");
+      var quantity = parseInt(quantityElement.value);
+      quantityElement.value = quantity + 1;
+    }
+
+    function decreaseQuantity() {
+      var quantityElement = document.getElementById("quantity");
+      var quantity = parseInt(quantityElement.value);
+      if (quantity > 1) {
+        quantityElement.value = quantity - 1;
+      }
+    }
+
+    function addToCart() {
+      var productName = document.getElementById("productName").textContent;
+      var productPrice = document.getElementById("productPrice").textContent;
+      var quantity = document.getElementById("quantity").value;
+
+      alert("'" + productName + "' ürününden " + quantity + " adet sepetinize eklendi. Toplam: ₺" + (productPrice * quantity).toFixed(2));
+    }
+  </script>
+</body>
+</html>

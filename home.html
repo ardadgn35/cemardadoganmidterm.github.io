@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hepsiburada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Siparişlerim</a></li>
+            <li><a href="#">Supar Fiyat</a></li>
+            <li><a href="#">Süper Taksit</a></li>
+            <li><a href="#">Yurt Dışından</a></li>
+            <li><a href="#">Kampanyalar</a></li>
+            <li><a href="#">Girişimci Kadınlar</a></li>
+            <li><a href="#">Müşteri Hizmetleri</a></li>
+            <li><a href="#">Hapsiburada Premium</a></li>
+            <li><a href="#">Hepsiburada'da Satıcı Ol</a></li>
+        </ul>
+    </nav>
+
+    <nav id="nav2">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Ürün, kategori veya marka ara">
+            <button onclick="searchProduct()">ARA</button>
+        </div>
+        <div class="images">
+            <img src="images/konum.png" alt="Resim 1">
+            <img src="images/login.png" alt="Resim 2">
+            <img src="images/sepet.png" alt="Resim 3">
+        </div>
+    </nav>
+
+    <nav id="image-navbar">
+            <img src="images/navbaralti.png" alt="Banner" class="full-width-image">
+    </nav>
+
+    <nav id="navbar3">
+        <ul>
+            <li><a href="#">Elektronik</a></li>
+            <li><a href="#">Moda</a></li>
+            <li><a href="#">Ev, Yaşam, Kırtasiye, Ofis</a></li>
+            <li><a href="#">Oto, Bahçe, Yapı, Market</a></li>
+            <li><a href="#">Anne, Bebek, Oyuncak</a></li>
+            <li><a href="#">Spor, Outdoor</a></li>
+            <li><a href="#">Kozmetik, Kişisel Bakım</a></li>
+            <li><a href="#">Süpermarket, Pet Shop</a></li>
+            <li><a href="#">Kitap, Müzik, Film, Hobi</a></li>
+        </ul>
+    </nav>  
+
+    <div class="slideshow">
+        <img src="images/background2.jfif" alt="Kampanya Resmi 1" class="slide active">
+        <img src="images/background2.jfif" alt="Kampanya Resmi 2" class="slide">
+        <img src="images/background2.jfif" alt="Kampanya Resmi 3" class="slide">
+        <img src="images/background5.jfif" alt="Kampanya Resmi 3" class="slide">
+        <img src="images/background4.jfif" alt="Kampanya Resmi 3" class="slide">
+        <img src="images/background9.jfif" alt="Kampanya Resmi 3" class="slide">
+        <img src="images/background2.jfif" alt="Kampanya Resmi 3" class="slide">
+        <img src="images/background7.jfif" alt="Kampanya Resmi 3" class="slide">
+        <img src="images/background8.jfif" alt="Kampanya Resmi 3" class="slide">
+
+
+    </div>
+
+    <button class="button-left" onclick="prevSlide()"><</button>
+    <button class="button-right" onclick="nextSlide()">></button>
+
+    <table>
+        <tr>
+            <td>
+                <img src="images/1bg.png" alt="Resim" id="tableImage">
+            </td>
+        </tr>
+    </table>
+        
+    <script>
+        let slideIndex = 0;
+
+        function updateButtons() {
+            const slides = document.querySelectorAll('.slideshow img');
+            const prevButton = document.querySelector('.button-left');
+            const nextButton = document.querySelector('.button-right');
+
+            if (slideIndex === 0) {
+                prevButton.style.display = 'none';
+            } else {
+                prevButton.style.display = 'block';
+            }
+
+            if (slideIndex === slides.length - 1) {
+                nextButton.style.display = 'none';
+            } else {
+                nextButton.style.display = 'block';
+            }
+        }
+
+        function nextSlide() {
+            const slides = document.querySelectorAll('.slideshow img');
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add('active');
+            updateButtons();
+
+            const tableImage = document.getElementById('tableImage');
+            tableImage.src = `images/${slideIndex + 1}bg.png`;
+        }
+
+        function prevSlide() {
+            const slides = document.querySelectorAll('.slideshow img');
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+            slides[slideIndex].classList.add('active');
+            updateButtons();
+
+            const tableImage = document.getElementById('tableImage');
+            tableImage.src = `images/${slideIndex + 1}bg.png`;
+        }
+
+        updateButtons();
+
+        function openCategoriesPage() {
+            window.location.href = "kategoriler.html";
+        }
+
+        function searchProduct() {
+            var searchText = document.querySelector('.search input[type="text"]').value.toLowerCase();
+            
+            if (searchText === "ürünler") {
+                openCategoriesPage();
+                return;
+            }
+            
+            var productsTable = document.getElementById('urunlertable');
+            var productRows = productsTable.getElementsByTagName('tr');
+            
+            for (var i = 0; i < productRows.length; i++) {
+                var productInfo = productRows[i].getElementsByClassName('urun_bilgi')[0].innerText.toLowerCase();
+                
+                if (productInfo.includes(searchText)) {
+                    productRows[i].style.display = '';
+                } else {
+                    productRows[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

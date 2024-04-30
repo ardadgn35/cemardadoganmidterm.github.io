@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hepsiburada - Kategoriler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kategori-menu">
+        <ul>
+            <li><a href="#">Kategori</a></li>
+            <li><a href="kategoriler.html">Tüm kategoriler</a></li>
+            <li><a href="kategorianne.html">Anne / Bebek / Oyuncak</a></li>
+            <li><a href="kategoriyapi.html">Yapı Market / Bahçe / Oto</a></li>
+            <li><a href="kategorianne.html">Hobi ve Oyun Konsolları</a></li>
+            <li><a href="kategoriyapi.html">Ev Dekorasyon</a></li>
+            <li><a href="kategoriyapi.html">Spor Outdoor</a></li>
+            <li><a href="kategoriyapi.html">Giyim / Ayakkabı</a></li>
+            <li><a href="kategoriyapi.html">Beyaz Eşya / Mutfak</a></li>
+            <li><a href="kategoriev.html">Ev Elektroniği</a></li>
+            <li><a href="kategoriyapi.html">Telefon</a></li>
+            <li><a href="kategoriofis.html">Kırtasiye / Ofis</a></li>
+            <li><a href="kategoripc.html">Bilgisayar</a></li>
+            <li><a href="kategoriyapi.html">Kitap Film Müzik</a></li>
+            <li><a href="kategoriyapi.html">Kozmetik Kişisel Bakım</a></li>
+        </ul>
+    </div>
+
+    <table id="tableyatay">
+        <tr>
+            <td id="solAlan" rowspan="2">
+                <div>
+                    <img src="images/konumizmir.png" alt="Sol Resim">
+                    <strong>Teslimat filtreleri</strong>
+                </div>
+                <div>
+                    Konumunuzu seçerek hızlı teslimattan faydalanın
+                </div>
+            </td>
+        <tr>
+            <td id="sagAlan">
+                <div>
+                    <div class="kare" onclick="toggleCheck(this)"></div>
+                    <span class="yazi">Yarın kapında</span>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <table id="urunlertable">
+        <tr>
+            <td>
+                <div class="urun"  onclick="goToUrun10()">
+                    <img src="images/urun11.jfif" alt="Ürün Resmi">
+                    <div class="urun_bilgi">
+                        Dreame Bot L10 Pro Akıllı Robot Süpürge
+                        <div class="rating">
+                            ★★★☆☆
+                        </div>
+                        11.999,00 TL
+                    </div> 
+            </td>
+            <td>
+                <div class="urun"  onclick="goToUrun3()">
+                    <img src="images/urun4.jfif" alt="Ürün Resmi">
+                    <div class="urun_bilgi">
+                        Orion 3.7V 14500 Li-Ion Siyah Soketli Oyuncak Araba Pili 14MM x 50MM Ölçülerinde
+                        <div class="rating">
+                            ★★★☆☆
+                        </div>
+                        279,00 TL
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="urun"  onclick="goToUrun4()">
+                    <img src="images/urun5.webp" alt="Ürün Resmi">
+                    <div class="urun_bilgi">
+                        Nistabolje 10 Adet AG13/LR44/357A Düğme Saat Pil Oyuncak Pili Alkalin
+                        <div class="rating">
+                            ★★★☆☆
+                        </div>
+                        79,99 TL
+                    </div>
+            </td>
+            <td>
+                <div class="urun"  onclick="goToUrun5()">
+                    <img src="images/urun6.webp" alt="Ürün Resmi">
+                    <div class="urun_bilgi">
+                        Tnl 4.8V Oyuncak Araba Için USB Siyah Soketli Şarj Cihazı
+                        <div class="rating">
+                            ★★★☆☆
+                        </div>
+                        286,00 TL
+                    </div>
+            </td>
+            <td>
+                <div class="urun"  onclick="goToUrun6()">
+                    <img src="images/urun7.webp" alt="Ürün Resmi">
+                    <div class="urun_bilgi">
+                        Bataryapil 6V 2700MAH Oyuncak Araba Bataryası Tamiya Soketli
+                        <div class="rating">
+                            ★★★☆☆
+                        </div>
+                        350,00 TL
+                    </div>    
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="urun"  onclick="goToUrun8()">
+                    <img src="images/urun9.webp" alt="Ürün Resmi">
+                    <div class="urun_bilgi">
+                        Philips XC7040/01 SpeedPro Max 25.2 V Dikey Şarjlı Süpürge
+                        <div class="rating">
+                            ★★★☆☆
+                        </div>
+                        6.999,00 TL
+                    </div>    
+            </td>
+            <td>
+                <div class="urun"  onclick="goToUrun9()">
+                    <img src="images/urun10.jfif" alt="Ürün Resmi">
+                    <div class="urun_bilgi">
+                        Philips Azur 8000 Serisi Dst8050/20 Optimaltemp 3000 W Buharlı Ütü
+                        <div class="rating">
+                            ★★★☆☆
+                        </div>
+                        3.999,00 TL
+                    </div>  
+            </td>
+
+        </tr>
+    </table>
+    
+
+    <script>
+        function toggleCheck(element) {
+            element.classList.toggle("isaretli");
+        }
+        function goToUrun1() {
+        window.location.href = "urun1.html"; 
+        }
+        function goToUrun2() {
+        window.location.href = "urun2.html"; 
+        }
+        function goToUrun3() {
+        window.location.href = "urun3.html"; 
+        }
+        function goToUrun4() {
+        window.location.href = "urun4.html"; 
+        }
+        function goToUrun5() {
+        window.location.href = "urun5.html"; 
+        }
+        function goToUrun6() {
+        window.location.href = "urun6.html"; 
+        }
+        function goToUrun7() {
+        window.location.href = "urun7.html"; 
+        }
+        function goToUrun8() {
+        window.location.href = "urun8.html"; 
+        }
+        function goToUrun9() {
+        window.location.href = "urun9.html"; 
+        }
+        function goToUrun10() {
+        window.location.href = "urun10.html"; 
+        }
+
+        function toggleCheck(element) {
+        element.classList.add("isaretli");
+        window.location.href = "yarinkapindatum.html";
+    }
+
+    </script>
+
+</body>
+</html>
